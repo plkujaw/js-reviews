@@ -91,3 +91,10 @@ prevBtn.addEventListener("click", () => {
   }
   showPerson(currentItem);
 });
+
+// show random review
+
+randomBtn.addEventListener("click", () => {
+  currentItem = Math.floor(Math.random() * reviews.length);
+  showPerson(currentItem);
+});
