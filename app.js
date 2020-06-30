@@ -69,3 +69,14 @@ showPerson = (person) => {
   job.textContent = item.job;
   info.textContent = item.text;
 }
+
+// show next review
+
+nextBtn.addEventListener("click", () => {
+  currentItem++;
+  // when we reach last element in the array we start from the beginning
+  if(currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
