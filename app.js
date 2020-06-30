@@ -80,3 +80,14 @@ nextBtn.addEventListener("click", () => {
   }
   showPerson(currentItem);
 });
+
+// show previous review
+
+prevBtn.addEventListener("click", () => {
+  currentItem--;
+  // when we reach last element in the array we start from the last item
+  if(currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+});
